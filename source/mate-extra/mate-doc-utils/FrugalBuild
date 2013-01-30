@@ -3,20 +3,20 @@
 
 pkgname=mate-doc-utils
 pkgver=1.5.0
-pkgrel=1
+pkgrel=2
 pkgdesc="MATE Desktop doc utils"
 url="http://mate-desktop.org"
 archs=('i686' 'x86_64')
 groups=('mate-extra' 'mate-base')
 depends=('mate-common')
 makedepends=('intltool')
-up2date="Flasttar http://pub.mate-desktop.org/releases/1.5/"
-source="http://pub.mate-desktop.org/releases/1.5/$pkgname-$pkgver.tar.xz"
+Finclude mate mate-scriptlet
 sha1sums=('67162bec043e9af1cace32dd6731cde862637d99')
 
 build()
 {
 	Fcd
 	./autogen.sh || Fdie
-	Fbuild --disable-scrollkeeper
+	Fbuild
+	Fbuild_mate_scriptlet
 }
