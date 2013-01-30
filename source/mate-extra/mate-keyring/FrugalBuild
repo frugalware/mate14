@@ -1,0 +1,28 @@
+# Compiling Time: 0.75 SBU
+# Maintainer: Pingax <pingax@frugalware.fr>
+
+pkgname=mate-keyring
+pkgver=1.5.0
+pkgrel=1
+pkgdesc="Framework for managing passwords and other secrets"
+archs=('i686' 'x86_64')
+groups=('mate-extra' 'mate-base')
+depends=()
+makedepends=('mate-common' 'gtk+2' 'dbus' 'libtasn1' 'libgcrypt' 'pam' \
+	'libcap' 'intltool')
+_F_mate_glib="y"
+Finclude mate mate-scriptlet
+sha1sums=('31d041809648b804a7410b78fef0deea21e2606a')
+
+build()
+{
+	Fcd
+	Fsed "AM_CONFIG_HEADER" "AC_CONFIG_HEADERS" configure.in
+	./autogen.sh || Fdie
+	Fmake --enable-pam --with-gtk=2.0
+	Fmakeinstall
+	Fbuild_mate_scriptlet
+}
+
+
+# optimization OK
