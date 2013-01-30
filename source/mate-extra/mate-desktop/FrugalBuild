@@ -1,0 +1,27 @@
+# Compiling Time: 0.26 SBU
+# Maintainer: Pingax <pingax@frugalware.fr>
+
+pkgname=mate-desktop
+pkgver=1.5.5
+pkgrel=1
+pkgdesc="Library with common API for various MATE modules"
+archs=('i686' 'x86_64')
+groups=('mate-extra' 'mate-base')
+depends=('unique1' 'libmatenotify' 'hicolor-icon-theme' 'gvfs-obexftp')
+makedepends=('mate-doc-utils' 'intltool')
+_F_mate_iconcache="y"
+_F_mate_glib="y"
+_F_mate_desktop="y"
+Finclude mate mate-scriptlet
+sha1sums=('a244ef9413068b04a9430e70d31730b043d7694d')
+
+build()
+{
+	Fcd
+	./autogen.sh || Fdie
+	Fmake
+	Fmakeinstall
+	Fbuild_mate_scriptlet
+}
+
+# optimization OK
