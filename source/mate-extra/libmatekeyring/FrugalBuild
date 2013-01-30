@@ -1,0 +1,22 @@
+# Compiling Time: 0.13 SBU
+# Maintainer: Pingax <pingax@frugalware.fr>
+
+pkgname=libmatekeyring
+pkgver=1.5.0
+pkgrel=1
+pkgdesc="Framework for managing passwords and other secrets"
+archs=('i686' 'x86_64')
+groups=('mate-extra' 'mate-base')
+depends=()
+makedepends=('glib2' 'dbus' 'libgcrypt' 'intltool' 'mate-common')
+Finclude mate
+sha1sums=('d83655afa119c16b8ea16d2aff8c8f20f87d5220')
+
+build()
+{
+	Fcd
+	Fsed "AM_CONFIG_HEADER" "AC_CONFIG_HEADERS" configure.in
+	./autogen.sh || Fdie
+	Fmake --disable-gtk-doc
+	Fmakeinstall
+}
