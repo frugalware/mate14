@@ -1,0 +1,25 @@
+# Compiling Time: 0.40 SBU
+# Maintainer: Pingax <pingax@frugalware.fr>
+
+pkgname=libmatewnck
+pkgver=1.5.0
+pkgrel=1
+pkgdesc="MATE Desktop Window Navigator Construction Kit Librairies"
+archs=('i686' 'x86_64')
+groups=('mate-extra' 'mate-base')
+depends=()
+makedepends=('gobject-introspection' 'gtk-doc' 'gtk+2' 'libxres' 'mate-common' \
+	'startup-notification' 'intltool')
+Finclude mate
+sha1sums=('933365db605ed6b467220e4ae1da9eb326fe7726')
+
+build()
+{
+	Fcd
+	Fsed 'AM_CONFIG_HEADER' 'AC_CONFIG_HEADERS' configure.ac
+	./autogen.sh || Fdie
+	Fmake
+	Fmakeinstall
+}
+
+# optimization OK
