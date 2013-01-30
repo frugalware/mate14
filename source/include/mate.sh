@@ -21,6 +21,10 @@
 # the source tarball
 ###
 
+if [ -z $_F_mate_name ] ; then
+	_F_mate_name=$pkgname
+fi
+
 if [ -z $_F_mate_ver ] ; then
     _F_mate_ver="1.5"
 fi
