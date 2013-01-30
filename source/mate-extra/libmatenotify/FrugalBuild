@@ -1,0 +1,24 @@
+# Compiling Time: 0.20 SBU
+# Maintainer: Pingax <pingax@frugalware.fr>
+
+pkgname=libmatenotify
+pkgver=1.5.0
+pkgrel=1
+pkgdesc="Desktop notification library"
+archs=('i686' 'x86_64')
+groups=('mate-extra' 'mate-base')
+depends=('gdk-pixbuf2')
+makedepends=('mate-common' 'gtk+2' 'gobject-introspection' 'dbus-glib')
+Finclude mate
+sha1sums=('2d12f5743fcff4d55ae4d3cfeed991085ca85830')
+
+build()
+{
+	Fcd
+	Fsed "AM_CONFIG_HEADER" "AC_CONFIG_HEADERS" configure.ac
+	./autogen.sh || Fdie
+	Fmake
+	Fmakeinstall
+}
+
+# optimization OK
