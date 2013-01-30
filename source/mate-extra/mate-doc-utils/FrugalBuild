@@ -3,7 +3,7 @@
 
 pkgname=mate-doc-utils
 pkgver=1.5.0
-pkgrel=2
+pkgrel=3
 pkgdesc="MATE Desktop doc utils"
 url="http://mate-desktop.org"
 archs=('i686' 'x86_64')
@@ -11,12 +11,13 @@ groups=('mate-extra' 'mate-base')
 depends=('mate-common')
 makedepends=('intltool')
 Finclude mate mate-scriptlet
-sha1sums=('67162bec043e9af1cace32dd6731cde862637d99')
+source=($source fix_mock_build_errors.patch)
+sha1sums=('67162bec043e9af1cace32dd6731cde862637d99' \
+          '66367091e495b135c03161c80030722912c288c0')
 
 build()
 {
 	Fcd
-	./autogen.sh || Fdie
 	Fbuild
 	Fbuild_mate_scriptlet
 }
