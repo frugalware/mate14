@@ -1,0 +1,27 @@
+# Compiling Time: 1.59 SBU
+# Maintainer: Pingax <pingax@frugalware.fr>
+
+pkgname=libmateweather
+pkgver=1.5.1
+pkgrel=1
+pkgdesc="Librairies to allow MATE Desktop to display weather information"
+archs=('i686' 'x86_64')
+groups=('mate-extra' 'mate-base')
+depends=()
+makedepends=('gsettings-desktop-schemas' 'libsoup' 'mate-common' \
+	'python-gudev' 'pygtk' 'intltool')
+_F_mate_glib="y"
+_F_mate_iconcache="y"
+Finclude mate mate-scriptlet
+sha1sums=('ff7a83b7fe93086c967791bfac1cec7a3404bbd1')
+
+build()
+{
+	Fcd
+	Fsed 'AM_CONFIG_HEADER' 'AC_CONFIG_HEADERS' configure.ac
+	Fmake --with-gnu-ld --enable-python --enable-gtk-doc-html
+	Fmakeinstall
+	Fbuild_mate_scriptlet
+}
+
+# optimization OK
