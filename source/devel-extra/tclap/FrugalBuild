@@ -1,5 +1,5 @@
 # Compiling Time: 0.35 SBU
-# Maintainer: Pingax <pingax@frugalware.fr>
+# Maintainer: Pingax <pingax@frugalware.org>
 
 pkgname=tclap
 pkgver=1.2.1

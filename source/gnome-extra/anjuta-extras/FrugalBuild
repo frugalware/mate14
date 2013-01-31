@@ -1,6 +1,6 @@
 # Compiling Time: 1.28 SBU
 # Maintainer: Baste <baste@frugalware.org>
-# Contributor: Pingax <pingax@frugalware.fr>
+# Contributor: Pingax <pingax@frugalware.org>
 
 pkgname=anjuta-extras
 pkgver=3.6.0

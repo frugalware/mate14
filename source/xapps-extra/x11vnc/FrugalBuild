@@ -1,5 +1,5 @@
 # Compiling time: 0.32 SBU
-# Maintainer: Pingax <pingax@frugalware.fr>
+# Maintainer: Pingax <pingax@frugalware.org>
 
 pkgname=x11vnc
 pkgver=0.9.13

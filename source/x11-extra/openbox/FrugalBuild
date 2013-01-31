@@ -1,6 +1,6 @@
 # Compiling Time: 0.24 SBU
 # Contributor: Adam Zlehovszky <zleho@index.hu>
-# Maintainer: Pingax <pingax@frugalware.fr>
+# Maintainer: Pingax <pingax@frugalware.org>
 
 USE_GNOME=${USE_GNOME:-"n"}
 

@@ -1,5 +1,5 @@
 # Compiling Time: 0 SBU
-# Maintainer: Pingax <pingax@frugalware.fr>
+# Maintainer: Pingax <pingax@frugalware.org>
 
 pkgname=python3-distribute
 _F_archive_name="distribute"

@@ -1,5 +1,5 @@
 # COmpiling Time: 0.01 SBU
-# Maintainer: Pingax <pingax@frugalware.fr>
+# Maintainer: Pingax <pingax@frugalware.org>
 
 pkgname=python3-sleekxmpp
 _F_archive_name=sleekxmpp

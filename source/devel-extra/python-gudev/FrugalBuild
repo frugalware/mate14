@@ -1,5 +1,5 @@
 # Compiling Time: 0.17 SBU
-# Maintainer: Pingax <pingax@frugalware.fr>
+# Maintainer: Pingax <pingax@frugalware.org>
 
 pkgname=python-gudev
 pkgver=20110830
