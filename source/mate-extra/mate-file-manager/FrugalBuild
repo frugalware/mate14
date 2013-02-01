@@ -1,0 +1,28 @@
+# Compiling Time: 1.05 SBU
+# Maintainer: Pingax <pingax@frugalware.org>
+
+pkgname=mate-file-manager
+pkgver=1.5.2
+pkgrel=1
+pkgdesc="Caja - the MATE File Manager"
+archs=('i686' 'x86_64')
+groups=('mate-extra' 'mate-base')
+depends=('libexif' 'exempi' 'mate-icon-theme' 'shared-mime-info' 'desktop-file-utils' \
+	'gvfs' 'unique1' 'mate-desktop' 'gobject-introspection' 'gail')
+makedepends=('intltool' 'mate-common')
+_F_mate_desktop="y"
+_F_mate_mime="y"
+_F_mate_iconcache="y"
+Finclude mate mate-scriptlet
+sha1sums=('7aa7d1da0d2706713432bc9a7317d88160791665')
+
+build()
+{
+	Fcd
+	./autogen.sh \
+		--libexecdir=/usr/lib/caja \
+		--enable-unique	|| Fdie
+	Fmake
+	Fmakeinstall
+	Fbuild_mate_scriptlet
+}
