@@ -1,0 +1,21 @@
+# Compiling Time: 0.21 SBU
+# Maintainer: Pingax <pingax@frugalware.org>
+
+pkgname=mate-dialogs
+pkgver=1.5.0
+pkgrel=1
+pkgdesc="Display graphical dialog boxes from shell scripts"
+archs=('i686' 'x86_64')
+groups=('mate-extra' 'mate-base')
+depends=('libmatenotify')
+makedepends=('mate-common' 'mate-doc-utils' 'intltool' 'gtk+2')
+Finclude mate
+sha1sums=('1e67a3b2c551197a1e1eb82ce10c0dc9f40f7097')
+
+build()
+{
+	Fcd
+	./autogen.sh || Fdie
+	Fmake
+	Fmakeinstall
+}
