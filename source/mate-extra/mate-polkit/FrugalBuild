@@ -1,0 +1,23 @@
+# Compiling Time: 0.14 SBU
+# Maintainer: Pingax <pingax@frugalware.org>
+
+pkgname=mate-polkit
+pkgver=1.5.0
+pkgrel=1
+pkgdesc="Integrates polkit authentication for MATE Desktop"
+archs=('i686' 'x86_64')
+groups=('mate-extra' 'mate-base')
+depends=()
+makedepends=('gtk+2' 'mate-common' 'intltool' 'polkit' 'gobject-introspection')
+Finclude mate
+sha1sums=('49e8aaef5167a63cc35915f3f7014df14feacfde')
+
+build()
+{
+	Fcd
+	./autogen.sh || Fdie
+	Fmake
+	Fmakeinstall
+}
+
+# optimization OK
