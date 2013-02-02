@@ -1,0 +1,33 @@
+# Compiling Time: 0.40 SBU
+# Maintainer: Pingax <pingax@frugalware.org>
+
+pkgname=mate-window-manager
+pkgver=1.5.3
+pkgrel=1
+pkgdesc="The MATE Desktop window manager"
+archs=('i686' 'x86_64')
+groups=('mate-extra' 'mate-base')
+depends=()
+makedepends=('desktop-file-utils' 'gsettings-desktop-schemas' 'libcanberra-gtk2' \
+	'mate-common' 'mate-dialogs' 'mate-doc-utils' 'libsm' 'libsoup' 'libxdamage' 'intltool' 'pkgconfig')
+_F_mate_desktop="y"
+_F_mate_glib="y"
+Finclude mate mate-scriptlet
+source=($source libcanberra.patch)
+sha1sums=('220ef12c3ad10f144977663ab81e35e46e15a7df' \
+          '439caec87b1700a2d33823abc91acd386f1b1b01')
+
+build()
+{
+	Fcd
+	Fpatchall
+	./autogen.sh \
+		--with-gnu-ld \
+		--with-gtk=2.0 \
+		--with-x || Fdie
+	Fmake
+	Fmakeinstall
+	Fbuild_mate_scriptlet
+}
+
+# optimization OK
