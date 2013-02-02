@@ -1,0 +1,21 @@
+# Compiling Time: 0.05 SBU
+# Maintainer: Pingax <pingax@frugalware.org>
+
+pkgname=mate-backgrounds
+pkgver=1.5.0
+pkgrel=1
+pkgdesc="A set of wallpapers for the MATE Desktop"
+archs=('i686' 'x86_64')
+groups=('mate-extra' 'mate-base')
+depends=()
+makedepends=('mate-common' 'intltool')
+Finclude mate
+sha1sums=('16c9806df158aa6ec013ad14d4c1b44ab8223027')
+
+build()
+{
+	Fcd
+	./autogen.sh || Fdie
+	Fmake
+	Fmakeinstall
+}
