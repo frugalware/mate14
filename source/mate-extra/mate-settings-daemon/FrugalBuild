@@ -1,0 +1,31 @@
+# Compiling Time: 0.79 SBU
+# Maintainer: Pingax <pingax@frugalware.org>
+
+pkgname=mate-settings-daemon
+pkgver=1.5.4
+pkgrel=1
+pkgdesc="MATE Desktop settings daemon"
+archs=('i686' 'x86_64')
+groups=('mate-extra' 'mate-base')
+depends=('mate-icon-theme' 'gsettings-desktop-schemas')
+makedepends=('mate-common' 'intltool' 'icon-naming-utils' 'clutter-gst' 'gtk+2' \
+	'libxklavier' 'libmatekbd' 'mate-desktop' 'nss' 'mate-polkit' 'libsm')
+_F_mate_iconcache="y"
+_F_mate_glib="y"
+Finclude mate mate-scriptlet
+sha1sums=('701051e6afe94942d70b09499ca96d9d437f4395')
+
+build()
+{
+	Fcd
+	./autogen.sh \
+		--enable-polkit \
+		--with-gnu-ld \
+		--with-x \
+		--with-nssdb \
+		--enable-gstreamer || Fdie
+	Fbuild
+	Fbuild_mate_scriptlet
+}
+
+# optimization OK
