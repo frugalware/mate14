@@ -2,19 +2,19 @@
 # Maintainer: Pingax <pingax@frugalware.org>
 
 pkgname=mate-session-manager
-pkgver=1.5.0
+pkgver=1.5.1
 pkgrel=1
 pkgdesc="MATE Desktop session manager"
 archs=('i686' 'x86_64')
 groups=('mate-extra' 'mate-base')
-depends=('gsettings-desktop-schemas')
-makedepends=('desktop-file-utils' 'gtk+2' 'dbus-glib' 'mate-common' 'libsm' \
-	'upower' 'mate-polkit' 'mate-icon-theme' 'intltool')
+depends=('gsettings-desktop-schemas' 'desktop-file-utils' 'gtk+2' 'dbus-glib' \
+       	'libsm' 'upower' 'mate-polkit' 'mate-icon-theme')
+makedepends=('mate-common' 'intltool')
 _F_mate_desktop="y"
 _F_mate_glib="y"
 _F_mate_iconcache="y"
 Finclude mate mate-scriptlet
-sha1sums=('5166725527be049729567e5cf945be8ea926ed69')
+sha1sums=('b47f9c3798718c1ef7e1d7b0c3349e546713fdd1')
 
 build()
 {
