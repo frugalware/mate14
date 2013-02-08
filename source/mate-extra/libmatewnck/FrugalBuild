@@ -2,16 +2,15 @@
 # Maintainer: Pingax <pingax@frugalware.org>
 
 pkgname=libmatewnck
-pkgver=1.5.0
+pkgver=1.5.1
 pkgrel=1
 pkgdesc="MATE Desktop Window Navigator Construction Kit Librairies"
 archs=('i686' 'x86_64')
 groups=('mate-extra' 'mate-base')
-depends=()
-makedepends=('gobject-introspection' 'gtk-doc' 'gtk+2' 'libxres' 'mate-common' \
-	'startup-notification' 'intltool')
+depends=('gobject-introspection' 'gtk-doc' 'gtk+2' 'libxres' 'startup-notification')
+makedepends=('mate-common' 'intltool')
 Finclude mate
-sha1sums=('933365db605ed6b467220e4ae1da9eb326fe7726')
+sha1sums=('bcdb15e1bbd2ae80a36c32eeb48422e42d79a3f9')
 
 build()
 {
