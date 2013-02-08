@@ -1,0 +1,28 @@
+# Compiling Time: 0.26 SBU
+# Maintainer: Pingax <pingax@frugalware.org>
+
+pkgname=mate-notification-daemon
+pkgver=1.5.1
+pkgrel=1
+pkgdesc="Notification daemon for MATE Desktop"
+archs=('i686' 'x86_64')
+groups=('mate-extra' 'mate-base')
+depends=('desktop-file-utils' 'gsettings-desktop-schemas' 'icon-naming-utils' \
+	'libmatenotify' 'libmatewnck' 'mate-desktop' 'libcanberra-gtk2')
+makedepends=('mate-common' 'mate-doc-utils' 'intltool')
+_F_mate_desktop="y"
+_F_mate_glib="y"
+_F_mate_iconcache="y"
+Finclude mate mate-scriptlet
+source=($source libcanberra.patch)
+sha1sums=('4bc88d8e9dba53b9948fcdd498c7dcc1a5f55ab9' \
+          'ce6a46d3562aea32817ca67c1218f27822265c39')
+
+build()
+{
+	Fcd
+	Fpatchall
+	Fmake
+	Fmakeinstall
+	Fbuild_mate_scriptlet
+}
