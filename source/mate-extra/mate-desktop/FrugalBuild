@@ -2,7 +2,7 @@
 # Maintainer: Pingax <pingax@frugalware.org>
 
 pkgname=mate-desktop
-pkgver=1.5.5
+pkgver=1.5.6
 pkgrel=1
 pkgdesc="Library with common API for various MATE modules"
 archs=('i686' 'x86_64')
@@ -13,7 +13,7 @@ _F_mate_iconcache="y"
 _F_mate_glib="y"
 _F_mate_desktop="y"
 Finclude mate mate-scriptlet
-sha1sums=('a244ef9413068b04a9430e70d31730b043d7694d')
+sha1sums=('3a7df1dffde2241d265967ec197585c877ea0dac')
 
 build()
 {
