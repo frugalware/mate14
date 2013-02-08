@@ -2,25 +2,28 @@
 # Maintainer: Pingax <pingax@frugalware.org>
 
 pkgname=mate-panel
-pkgver=1.5.4
+pkgver=1.5.5
 pkgrel=1
 pkgdesc="The MATE Desktop panel applets"
 archs=('i686' 'x86_64')
 groups=('mate-extra' 'mate-base')
-depends=('mate-session-manager' 'gsettings-desktop-schemas')
-makedepends=('mate-common' 'dconf' 'desktop-file-utils' 'gobject-introspection' \
-	'icon-naming-utils' 'libcanberra-gtk2' 'libmateweather' 'mate-desktop' \
-	'mate-menus' 'intltool' 'mate-doc-utils' 'pkgconfig' 'libmatewnck' \
-	'startup-notification' 'libxres' 'librsvg')
+makedepends=('mate-common' 'intltool' 'mate-doc-utils')
+depends=('mate-session-manager' 'gsettings-desktop-schemas' 'dconf' \
+	'desktop-file-utils' 'gobject-introspection' 'icon-naming-utils' \
+       	'libcanberra-gtk2' 'libmateweather' 'mate-desktop' 'mate-menus' \
+	'libmatewnck' 'startup-notification' 'libxres' 'librsvg')
 _F_mate_desktop="y"
 _F_mate_glib="y"
 __F_mate_iconcache="y"
 Finclude mate mate-scriptlet
-sha1sums=('e7195dab2f479610af39f459a089299ffd1468fd')
+source=($source libcanberra.patch)
+sha1sums=('2cc844225f85fd8a060e2c957d5de6169f890d7a' \
+          '9644cf8d89d48abf21ad304bfaf4b542ad95b209')
 
 build()
 {
 	Fcd
+	Fpatchall
 	Fsed 'AM_CONFIG_HEADER' 'AC_CONFIG_HEADERS' configure.ac
 	./autogen.sh || Fdie
 	Fmake
