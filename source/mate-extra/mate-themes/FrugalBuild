@@ -1,0 +1,13 @@
+# Compiling Time: 0.57 SBU
+# Maintainer: Pingax <pingax@frugalware.org>
+
+pkgname=mate-themes
+pkgver=1.5.0
+pkgrel=1
+pkgdesc="Themes for MATE"
+archs=('i686' 'x86_64')
+groups=('mate-extra' 'mate-base')
+depends=('gdk-pixbuf2' 'gtk+2-engines' 'icon-naming-utils')
+makedepends=('mate-common' 'intltool')
+Finclude mate
+sha1sums=('045641d586895c793290b6bf68428060d952f69b')
