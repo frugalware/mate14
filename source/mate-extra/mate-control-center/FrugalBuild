@@ -1,0 +1,29 @@
+# Compiling Time: 0.21 SBU
+# Maintainer: Pingax <pingax@frugalware.org>
+
+pkgname=mate-control-center
+pkgver=1.5.3
+pkgrel=1
+pkgdesc="The MATE Control center"
+archs=('i686' 'x86_64')
+groups=('mate-extra' 'mate-base')
+depends=('dconf' 'xscreensaver' 'mate-window-manager' 'mate-menus' \
+       'mate-settings-daemon' 'mate-desktop' 'libxxf86misc' 'libxkbfile' \
+       'libcanberra-gtk2')
+makedepends=('mate-common' 'mate-doc-utils' 'intltool' 'desktop-file-utils')
+_F_mate_desktop="y"
+_F_mate_glib="y"
+_F_mate_mime="y"
+Finclude mate mate-scriptlet
+sha1sums=('ebd506995c328ccae737023a4299de5b3e13a602')
+
+build()
+{
+	Fcd
+	Fsed '#include <canberra-gtk.h>' '#include <canberra-gtk2.h>' typing-break/drw-break-window.c
+	Fmake
+	Fmakeinstall
+	Fbuild_mate_scriptlet
+}
+
+# optimization OK
