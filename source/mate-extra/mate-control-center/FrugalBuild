@@ -3,7 +3,7 @@
 
 pkgname=mate-control-center
 pkgver=1.5.3
-pkgrel=1
+pkgrel=2
 pkgdesc="The MATE Control center"
 archs=('i686' 'x86_64')
 groups=('mate-extra' 'mate-base')
@@ -13,7 +13,6 @@ depends=('dconf' 'xscreensaver' 'mate-window-manager' 'mate-menus' \
 makedepends=('mate-common' 'mate-doc-utils' 'intltool' 'desktop-file-utils')
 _F_mate_desktop="y"
 _F_mate_glib="y"
-_F_mate_mime="y"
 Finclude mate mate-scriptlet
 sha1sums=('ebd506995c328ccae737023a4299de5b3e13a602')
 
