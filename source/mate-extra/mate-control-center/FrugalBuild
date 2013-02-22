@@ -3,7 +3,7 @@
 
 pkgname=mate-control-center
 pkgver=1.5.3
-pkgrel=2
+pkgrel=3
 pkgdesc="The MATE Control center"
 archs=('i686' 'x86_64')
 groups=('mate-extra' 'mate-base')
@@ -23,6 +23,7 @@ build()
 	Fmake
 	Fmakeinstall
 	Fbuild_mate_scriptlet
+	Frm $Fdestdir/usr/share/mime/mime.cache
 }
 
 # optimization OK
