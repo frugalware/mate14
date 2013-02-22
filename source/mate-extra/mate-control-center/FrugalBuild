@@ -2,8 +2,8 @@
 # Maintainer: Pingax <pingax@frugalware.org>
 
 pkgname=mate-control-center
-pkgver=1.5.3
-pkgrel=3
+pkgver=1.5.4
+pkgrel=1
 pkgdesc="The MATE Control center"
 archs=('i686' 'x86_64')
 groups=('mate-extra' 'mate-base')
@@ -14,7 +14,7 @@ makedepends=('mate-common' 'mate-doc-utils' 'intltool' 'desktop-file-utils')
 _F_mate_desktop="y"
 _F_mate_glib="y"
 Finclude mate mate-scriptlet
-sha1sums=('ebd506995c328ccae737023a4299de5b3e13a602')
+sha1sums=('4c91af7341fcff12d6f706ccfd82d788319cd719')
 
 build()
 {
@@ -24,6 +24,7 @@ build()
 	Fmakeinstall
 	Fbuild_mate_scriptlet
 	Frm $Fdestdir/usr/share/mime/mime.cache
+	Frm $Fdestdir/usr/share/applications/mimeinfo.cache
 }
 
 # optimization OK
