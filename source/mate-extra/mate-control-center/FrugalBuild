@@ -3,7 +3,7 @@
 
 pkgname=mate-control-center
 pkgver=1.5.4
-pkgrel=1
+pkgrel=2
 pkgdesc="The MATE Control center"
 archs=('i686' 'x86_64')
 groups=('mate-extra' 'mate-base')
@@ -13,6 +13,7 @@ depends=('dconf' 'xscreensaver' 'mate-window-manager' 'mate-menus' \
 makedepends=('mate-common' 'mate-doc-utils' 'intltool' 'desktop-file-utils')
 _F_mate_desktop="y"
 _F_mate_glib="y"
+_F_mate_mime="n"
 Finclude mate mate-scriptlet
 sha1sums=('4c91af7341fcff12d6f706ccfd82d788319cd719')
 
@@ -23,8 +24,6 @@ build()
 	Fmake
 	Fmakeinstall
 	Fbuild_mate_scriptlet
-	Frm $Fdestdir/usr/share/mime/mime.cache
-	Frm $Fdestdir/usr/share/applications/mimeinfo.cache
 }
 
 # optimization OK
