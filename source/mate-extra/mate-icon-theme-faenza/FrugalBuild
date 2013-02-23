@@ -1,0 +1,13 @@
+# Compiling Time: 0.05 SBU
+# Maintainer: Pingax <pingax@frugalware.org>
+
+pkgname=mate-icon-theme-faenza
+pkgver=1.5.0
+pkgrel=1
+pkgdesc="Faenza icons set for MATE"
+archs=('i686' 'x86_64')
+groups=('mate-extra' 'mate-base')
+depends=()
+makedepends=('mate-common')
+Finclude mate
+sha1sums=('c5d6d8d1eb2a4aa2aed6c133f889722c3df1bd01')
