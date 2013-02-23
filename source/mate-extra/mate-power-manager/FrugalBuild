@@ -1,0 +1,27 @@
+# Compiling Time: 0.23 SBU
+# Maintainer: Pingax <pingax@frugalware.org>
+
+pkgname=mate-power-manager
+pkgver=1.5.1
+pkgrel=1
+pkgdesc="MATE power management service"
+archs=('i686' 'x86_64')
+groups=('mate-extra' 'mate-base')
+depends=('mate-control-center>=1.5.4-3' 'libmatekeyring' 'mate-panel')
+makedepends=('desktop-file-utils' 'mate-common' 'mate-doc-utils' 'intltool')
+_F_mate_desktop="y"
+_F_mate_iconcache="y"
+_F_mate_glib="y"
+Finclude mate mate-scriptlet
+sha1sums=('616262e872dc7dad4fb0384adf43a38824fb5e92')
+
+build()
+{
+	Fcd
+	Fsed "canberra-gtk.h" "canberra-gtk2.h" src/gpm-manager.c
+	Fmake
+	Fmakeinstall
+	Fbuild_mate_scriptlet
+}
+
+# optimization OK
