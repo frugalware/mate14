@@ -3,10 +3,10 @@
 
 pkgname=mate-applets
 pkgver=1.5.1
-pkgrel=1
+pkgrel=2
 pkgdesc="Applets for MATE panel"
 archs=('i686' 'x86_64')
-groups=('mate-extra' 'mate-base')
+groups=('mate-extra' 'mate-desktop')
 depends=('mate-panel')
 makedepends=('mate-common' 'intltool' 'mate-doc-utils')
 _F_mate_iconcache="y"
