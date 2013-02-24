@@ -10,14 +10,9 @@ archs=('i686' 'x86_64')
 groups=('mate-extra')
 depends=('mate-common')
 makedepends=('intltool')
+options=('scriptlet')
 Finclude mate mate-scriptlet
 source=($source fix_mock_build_errors.patch)
 sha1sums=('67162bec043e9af1cace32dd6731cde862637d99' \
           '66367091e495b135c03161c80030722912c288c0')
 
-build()
-{
-	Fcd
-	Fbuild
-	Fbuild_mate_scriptlet
-}
