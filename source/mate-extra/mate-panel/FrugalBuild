@@ -3,10 +3,10 @@
 
 pkgname=mate-panel
 pkgver=1.5.5
-pkgrel=2
+pkgrel=3
 pkgdesc="The MATE Desktop panel applets"
 archs=('i686' 'x86_64')
-groups=('mate-extra' 'mate-desktop')
+groups=('mate-extra')
 makedepends=('mate-common' 'intltool' 'mate-doc-utils')
 depends=('mate-session-manager' 'gsettings-desktop-schemas' 'dconf' \
 	'desktop-file-utils' 'gobject-introspection' 'icon-naming-utils' \

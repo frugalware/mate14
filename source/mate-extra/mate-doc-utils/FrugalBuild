@@ -3,11 +3,11 @@
 
 pkgname=mate-doc-utils
 pkgver=1.5.0
-pkgrel=4
+pkgrel=5
 pkgdesc="MATE Desktop doc utils"
 url="http://mate-desktop.org"
 archs=('i686' 'x86_64')
-groups=('mate-extra' 'mate-desktop')
+groups=('mate-extra')
 depends=('mate-common')
 makedepends=('intltool')
 Finclude mate mate-scriptlet

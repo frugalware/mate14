@@ -3,10 +3,10 @@
 
 pkgname=mate-menus
 pkgver=1.5.0
-pkgrel=3
+pkgrel=4
 pkgdesc="Displays menus for MATE Desktop"
 archs=('i686' 'x86_64')
-groups=('mate-extra' 'mate-desktop')
+groups=('mate-extra')
 depends=('gobject-introspection' 'python')
 makedepends=('mate-common' 'intltool')
 Finclude mate

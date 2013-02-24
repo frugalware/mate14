@@ -3,10 +3,10 @@
 
 pkgname=mate-control-center
 pkgver=1.5.4
-pkgrel=4
+pkgrel=5
 pkgdesc="The MATE Control center"
 archs=('i686' 'x86_64')
-groups=('mate-extra' 'mate-desktop')
+groups=('mate-extra')
 depends=('dconf' 'xscreensaver' 'mate-window-manager' 'mate-menus' \
        'mate-settings-daemon' 'mate-desktop' 'libxxf86misc' 'libxkbfile' \
        'libcanberra-gtk2' 'shared-mime-info')

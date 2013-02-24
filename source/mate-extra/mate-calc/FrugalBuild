@@ -3,10 +3,10 @@
 
 pkgname=mate-calc
 pkgver=1.5.1
-pkgrel=2
+pkgrel=3
 pkgdesc="Calc for the MATE Desktop"
 archs=('i686' 'x86_64')
-groups=('mate-extra' 'mate-desktop')
+groups=('mate-extra')
 depends=('gtk+2')
 makedepends=('mate-common' 'intltool')
 _F_mate_desktop="y"

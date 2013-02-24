@@ -3,10 +3,10 @@
 
 pkgname=mate-common
 pkgver=1.5.1
-pkgrel=3
+pkgrel=4
 pkgdesc="Mate common build files"
 archs=('i686' 'x86_64')
-groups=('mate-extra' 'mate-desktop')
+groups=('mate-extra')
 depends=('gtk-doc')
 makedepends=('automake')
 Finclude mate

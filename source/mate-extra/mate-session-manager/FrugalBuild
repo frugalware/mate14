@@ -3,10 +3,10 @@
 
 pkgname=mate-session-manager
 pkgver=1.5.1
-pkgrel=3
+pkgrel=4
 pkgdesc="MATE Desktop session manager"
 archs=('i686' 'x86_64')
-groups=('mate-extra' 'mate-desktop')
+groups=('mate-extra')
 depends=('gsettings-desktop-schemas' 'desktop-file-utils' 'gtk+2' 'dbus-glib' \
        	'dbus-x11' 'upower' 'mate-polkit' 'mate-icon-theme')
 makedepends=('mate-common' 'intltool')

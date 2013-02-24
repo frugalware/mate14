@@ -3,10 +3,10 @@
 
 pkgname=mate-file-manager
 pkgver=1.5.3
-pkgrel=2
+pkgrel=3
 pkgdesc="Caja - the MATE File Manager"
 archs=('i686' 'x86_64')
-groups=('mate-extra' 'mate-desktop')
+groups=('mate-extra')
 depends=('libexif' 'exempi' 'mate-icon-theme' 'shared-mime-info' 'desktop-file-utils' \
 	'gvfs' 'unique1' 'mate-desktop' 'gobject-introspection' 'gail')
 makedepends=('intltool' 'mate-common')

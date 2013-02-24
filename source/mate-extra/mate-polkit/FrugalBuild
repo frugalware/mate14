@@ -3,10 +3,10 @@
 
 pkgname=mate-polkit
 pkgver=1.5.0
-pkgrel=2
+pkgrel=3
 pkgdesc="Integrates polkit authentication for MATE Desktop"
 archs=('i686' 'x86_64')
-groups=('mate-extra' 'mate-desktop')
+groups=('mate-extra')
 depends=()
 makedepends=('gtk+2' 'mate-common' 'intltool' 'polkit' 'gobject-introspection')
 Finclude mate

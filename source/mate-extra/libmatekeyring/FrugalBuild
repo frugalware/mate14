@@ -3,10 +3,10 @@
 
 pkgname=libmatekeyring
 pkgver=1.5.0
-pkgrel=2
+pkgrel=3
 pkgdesc="Framework for managing passwords and other secrets"
 archs=('i686' 'x86_64')
-groups=('mate-extra' 'mate-desktop')
+groups=('mate-extra')
 depends=()
 makedepends=('glib2' 'dbus' 'libgcrypt' 'intltool' 'mate-common')
 Finclude mate

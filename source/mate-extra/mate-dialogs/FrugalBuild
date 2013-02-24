@@ -3,10 +3,10 @@
 
 pkgname=mate-dialogs
 pkgver=1.5.0
-pkgrel=2
+pkgrel=3
 pkgdesc="Display graphical dialog boxes from shell scripts"
 archs=('i686' 'x86_64')
-groups=('mate-extra' 'mate-desktop')
+groups=('mate-extra')
 depends=('libmatenotify')
 makedepends=('mate-common' 'mate-doc-utils' 'intltool' 'gtk+2')
 Finclude mate

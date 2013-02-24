@@ -3,10 +3,10 @@
 
 pkgname=mate-image-viewer
 pkgver=1.5.0
-pkgrel=2
+pkgrel=3
 pkgdesc="Eye of MATE image viewer"
 archs=('i686' 'x86_64')
-groups=('mate-extra' 'mate-desktop')
+groups=('mate-extra')
 depends=('mate-desktop' 'libart_lgpl' 'glib2' 'gtk+2' 'librsvg' 'exempi' \
        	'libexif' 'lcms' 'pygtk' 'dbus-glib' 'libjpeg' 'libxml2' 'mate-icon-theme')
 makedepends=('mate-common' 'intltool' 'mate-doc-utils' 'desktop-file-utils')
