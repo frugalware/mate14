@@ -3,10 +3,10 @@
 
 pkgname=mate-themes
 pkgver=1.5.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Themes for MATE"
 archs=('i686' 'x86_64')
-groups=('mate-extra' 'mate-base')
+groups=('mate-extra' 'mate-desktop')
 depends=('gdk-pixbuf2' 'gtk+2-engines' 'icon-naming-utils')
 makedepends=('mate-common' 'intltool')
 Finclude mate
