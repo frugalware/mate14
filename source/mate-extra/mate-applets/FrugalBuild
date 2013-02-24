@@ -1,0 +1,26 @@
+# Compiling Time: 0.89 SBU
+# Maintainer: Pingax <pingax@frugalware.org>
+
+pkgname=mate-applets
+pkgver=1.5.1
+pkgrel=1
+pkgdesc="Applets for MATE panel"
+archs=('i686' 'x86_64')
+groups=('mate-extra' 'mate-base')
+depends=('mate-panel')
+makedepends=('mate-common' 'intltool' 'mate-doc-utils')
+_F_mate_iconcache="y"
+_F_mate_glib="y"
+Finclude mate mate-scriptlet
+sha1sums=('51c5becce8d8330600b9f1c3cda632c8f0c5830f')
+
+build()
+{
+	Fcd
+	Fsed "AM_CONFIG_HEADER" "AC_CONFIG_HEADERS" configure.in
+	Fmake
+	Fmakeinstall
+	Fbuild_mate_scriptlet
+}
+
+# optimization OK
