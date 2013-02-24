@@ -3,12 +3,13 @@
 
 pkgname=mate-system-monitor
 pkgver=1.5.1
-pkgrel=1
+pkgrel=2
 pkgdesc="The MATE System Monitor"
 archs=('i686' 'x86_64')
 groups=('mate-extra' 'mate-base')
 depends=('mate-icon-theme' 'libmatewnck' 'gtkmm2' 'libgtop' 'dbus-glib' 'librsvg')
 makedepends=('mate-common' 'intltool' 'mate-doc-utils')
+_F_mate_glib="y"
 Finclude mate mate-scriptlet
 sha1sums=('500c204abf4bd8326d9f5f2c40f7b7c0dcef173d')
 
