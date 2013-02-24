@@ -3,10 +3,10 @@
 
 pkgname=libmatenotify
 pkgver=1.5.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Desktop notification library"
 archs=('i686' 'x86_64')
-groups=('mate-extra' 'mate-base')
+groups=('mate-extra' 'mate-desktop')
 depends=('gdk-pixbuf2')
 makedepends=('mate-common' 'gtk+2' 'gobject-introspection' 'dbus-glib')
 Finclude mate
