@@ -3,10 +3,10 @@
 
 pkgname=mate-notification-daemon
 pkgver=1.5.1
-pkgrel=1
+pkgrel=2
 pkgdesc="Notification daemon for MATE Desktop"
 archs=('i686' 'x86_64')
-groups=('mate-extra' 'mate-base')
+groups=('mate-extra' 'mate-desktop')
 depends=('desktop-file-utils' 'gsettings-desktop-schemas' 'icon-naming-utils' \
 	'libmatenotify' 'libmatewnck' 'mate-desktop' 'libcanberra-gtk2')
 makedepends=('mate-common' 'mate-doc-utils' 'intltool')
