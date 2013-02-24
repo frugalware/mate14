@@ -3,10 +3,10 @@
 
 pkgname=mate-system-monitor
 pkgver=1.5.1
-pkgrel=2
+pkgrel=3
 pkgdesc="The MATE System Monitor"
 archs=('i686' 'x86_64')
-groups=('mate-extra' 'mate-base')
+groups=('mate-extra' 'mate-desktop')
 depends=('mate-icon-theme' 'libmatewnck' 'gtkmm2' 'libgtop' 'dbus-glib' 'librsvg')
 makedepends=('mate-common' 'intltool' 'mate-doc-utils')
 _F_mate_glib="y"
