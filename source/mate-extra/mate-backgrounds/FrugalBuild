@@ -3,10 +3,10 @@
 
 pkgname=mate-backgrounds
 pkgver=1.5.0
-pkgrel=1
+pkgrel=2
 pkgdesc="A set of wallpapers for the MATE Desktop"
 archs=('i686' 'x86_64')
-groups=('mate-extra' 'mate-base')
+groups=('mate-extra' 'mate-desktop')
 depends=()
 makedepends=('mate-common' 'intltool')
 Finclude mate
