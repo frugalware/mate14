@@ -11,10 +11,3 @@ depends=('gtk-doc')
 makedepends=('automake')
 Finclude mate
 sha1sums=('bdc512d969a631cdc567f344d8b6effe63573c8e')
-
-build()
-{
-	Fcd
-	./autogen.sh || Fdie
-	Fbuild
-}
