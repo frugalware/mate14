@@ -3,10 +3,10 @@
 
 pkgname=mate-power-manager
 pkgver=1.5.1
-pkgrel=1
+pkgrel=2
 pkgdesc="MATE power management service"
 archs=('i686' 'x86_64')
-groups=('mate-extra' 'mate-base')
+groups=('mate-extra' 'mate-desktop')
 depends=('mate-control-center>=1.5.4-3' 'libmatekeyring' 'mate-panel')
 makedepends=('desktop-file-utils' 'mate-common' 'mate-doc-utils' 'intltool')
 _F_mate_desktop="y"
