@@ -3,10 +3,10 @@
 
 pkgname=mate-desktop
 pkgver=1.5.6
-pkgrel=3
+pkgrel=4
 pkgdesc="Library with common API for various MATE modules"
 archs=('i686' 'x86_64')
-groups=('mate-extra' 'mate-base')
+groups=('mate-extra' 'mate-desktop')
 depends=('unique1' 'libmatenotify' 'hicolor-icon-theme' 'gvfs-obexftp' \
 	'startup-notification' 'libtool')
 makedepends=('mate-doc-utils' 'intltool')
