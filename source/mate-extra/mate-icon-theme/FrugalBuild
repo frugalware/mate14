@@ -3,10 +3,10 @@
 
 pkgname=mate-icon-theme
 pkgver=1.5.0
-pkgrel=1
+pkgrel=2
 pkgdesc="The MATE icons theme"
 archs=('i686' 'x86_64')
-groups=('mate-extra' 'mate-base')
+groups=('mate-extra' 'mate-desktop')
 depends=('icon-naming-utils')
 makedepends=('mate-common' 'intltool')
 _F_mate_iconcache="y"
