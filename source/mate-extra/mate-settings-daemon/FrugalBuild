@@ -3,10 +3,10 @@
 
 pkgname=mate-settings-daemon
 pkgver=1.5.5
-pkgrel=1
+pkgrel=2
 pkgdesc="MATE Desktop settings daemon"
 archs=('i686' 'x86_64')
-groups=('mate-extra' 'mate-base')
+groups=('mate-extra' 'mate-desktop')
 depends=('mate-icon-theme' 'gsettings-desktop-schemas' 'icon-naming-utils' 'clutter-gst' 'gtk+2' 'libmatekbd' 'mate-desktop' 'nss' 'mate-polkit' 'libsm')
 makedepends=('mate-common' 'intltool')
 _F_mate_iconcache="y"
