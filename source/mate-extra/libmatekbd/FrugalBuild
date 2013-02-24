@@ -3,10 +3,10 @@
 
 pkgname=libmatekbd
 pkgver=1.5.1
-pkgrel=1
+pkgrel=2
 pkgdesc="Librairies for MATE kbd"
 archs=('i686' 'x86_64')
-groups=('mate-extra' 'mate-base')
+groups=('mate-extra' 'mate-desktop')
 depends=('gsettings-desktop-schemas' 'libxklavier' 'gtk+2')
 makedepends=('desktop-file-utils' 'mate-common' 'intltool')
 _F_mate_desktop="y"
