@@ -3,10 +3,10 @@
 
 pkgname=libmatewnck
 pkgver=1.5.1
-pkgrel=1
+pkgrel=2
 pkgdesc="MATE Desktop Window Navigator Construction Kit Librairies"
 archs=('i686' 'x86_64')
-groups=('mate-extra' 'mate-base')
+groups=('mate-extra' 'mate-desktop')
 depends=('gobject-introspection' 'gtk-doc' 'gtk+2' 'libxres' 'startup-notification')
 makedepends=('mate-common' 'intltool')
 Finclude mate
