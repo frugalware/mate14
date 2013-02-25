@@ -1,0 +1,15 @@
+# Compiling Time: 0.21 SBU
+# Maintainer: Pingax <pingax@frugalware.org>
+
+pkgname=mate-character-map
+pkgver=1.5.0
+pkgrel=1
+pkgdesc="A featureful unicode character map"
+archs=('i686' 'x86_64')
+groups=('mate-extra')
+depends=('gtk+2')
+makedepends=('mate-common' 'intltool' 'mate-doc-utils')
+_F_mate_desktop="y"
+_F_mate_glib="y"
+Finclude mate
+sha1sums=('d6615cba3d1643032c9183f7a34106f311d3f9ae')
