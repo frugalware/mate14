@@ -1,0 +1,16 @@
+# Compiling Time: 0.68 SBU
+# Maintainer: Pingax <pingax@frugalware.org>
+
+pkgname=mate-text-editor
+pkgver=1.5.0
+pkgrel=1
+pkgdesc="The MATE Text editor"
+archs=('i686' 'x86_64')
+groups=('mate-extra')
+depends=('enchant' 'iso-codes' 'gtksourceview')
+makedepends=('mate-common' 'intltool' 'mate-doc-utils')
+_F_mate_glib="y"
+_F_mate_desktop="y"
+options=('scriptlet')
+Finclude mate mate-scriptlet
+sha1sums=('772a52153ce2fa684c06a88dc3babae7a85e61eb')
