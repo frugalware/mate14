@@ -1,9 +1,11 @@
 # Compiling Time: 0.23 SBU
 # Maintainer: Pingax <pingax@frugalware.org>
 
+options+=('asneeded')
+
 pkgname=libmatekbd
 pkgver=1.5.1
-pkgrel=3
+pkgrel=4
 pkgdesc="Librairies for MATE kbd"
 archs=('i686' 'x86_64')
 groups=('mate-extra')
@@ -11,15 +13,9 @@ depends=('gsettings-desktop-schemas' 'libxklavier' 'gtk+2')
 makedepends=('desktop-file-utils' 'mate-common' 'intltool')
 _F_mate_desktop="y"
 _F_mate_glib="y"
+options=('scriptlet')
 Finclude mate mate-scriptlet
 sha1sums=('2396b54e219ad8fa6575cb7de634c27f61d63874')
 
-build()
-{
-	Fcd
-	Fmake
-	Fmakeinstall
-	Fbuild_mate_scriptlet
-}
 
 # optimization OK
