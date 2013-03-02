@@ -1,9 +1,11 @@
 # Compiling Time: 0.03 SBU
 # Maintainer: Pingax <pingax@frugalware.org>
 
+options+=('asneeded')
+
 pkgname=mate-common
 pkgver=1.5.1
-pkgrel=4
+pkgrel=5
 pkgdesc="Mate common build files"
 archs=('i686' 'x86_64')
 groups=('mate-extra')
