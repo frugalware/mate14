@@ -1,9 +1,11 @@
 # Compiling Time: 0.42 SBU
 # Maintainer: Pingax <pingax@frugalware.org>
 
+options+=('asneeded')
+
 pkgname=mate-doc-utils
 pkgver=1.5.0
-pkgrel=5
+pkgrel=6
 pkgdesc="MATE Desktop doc utils"
 url="http://mate-desktop.org"
 archs=('i686' 'x86_64')
