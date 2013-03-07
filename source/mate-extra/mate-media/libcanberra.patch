@@ -1,0 +1,55 @@
+--- sound-theme/gvc-sound-theme-chooser.c.orig	2013-03-07 23:32:54.580685283 +0100
++++ sound-theme/gvc-sound-theme-chooser.c	2013-03-07 23:33:12.638487534 +0100
+@@ -31,7 +31,7 @@
+ #include <glib/gi18n.h>
+ #include <gio/gio.h>
+ #include <gtk/gtk.h>
+-#include <canberra-gtk.h>
++#include <canberra-gtk2.h>
+ #include <libxml/tree.h>
+ 
+ #include "gvc-sound-theme-chooser.h"
+--- mate-volume-control/src/gvc-channel-bar.c.orig	2013-03-07 23:34:11.471834324 +0100
++++ mate-volume-control/src/gvc-channel-bar.c	2013-03-07 23:34:27.173659787 +0100
+@@ -29,7 +29,7 @@
+ #include <glib.h>
+ #include <glib/gi18n.h>
+ #include <gtk/gtk.h>
+-#include <canberra-gtk.h>
++#include <canberra-gtk2.h>
+ 
+ #include "gvc-channel-bar.h"
+ 
+--- mate-volume-control/src/gvc-balance-bar.c.orig	2013-03-07 23:34:39.010528137 +0100
++++ mate-volume-control/src/gvc-balance-bar.c	2013-03-07 23:34:52.425381847 +0100
+@@ -27,7 +27,7 @@
+ #include <glib.h>
+ #include <glib/gi18n.h>
+ #include <gtk/gtk.h>
+-#include <canberra-gtk.h>
++#include <canberra-gtk2.h>
+ 
+ #include "gvc-balance-bar.h"
+ 
+--- mate-volume-control/src/gvc-combo-box.c.orig	2013-03-07 23:35:03.678254277 +0100
++++ mate-volume-control/src/gvc-combo-box.c	2013-03-07 23:35:19.056081680 +0100
+@@ -27,7 +27,7 @@
+ #include <glib.h>
+ #include <glib/gi18n.h>
+ #include <gtk/gtk.h>
+-#include <canberra-gtk.h>
++#include <canberra-gtk2.h>
+ 
+ #include "gvc-combo-box.h"
+ #include "gvc-mixer-stream.h"
+--- mate-volume-control/src/gvc-speaker-test.c.orig	2013-03-07 23:50:54.875668319 +0100
++++ mate-volume-control/src/gvc-speaker-test.c	2013-03-07 23:51:05.827542456 +0100
+@@ -28,7 +28,7 @@
+ #include <glib/gi18n.h>
+ #include <gtk/gtk.h>
+-#include <canberra.h>
+-#include <canberra-gtk.h>
++#include <canberra-gtk2.h>
+ 
+ #include "gvc-speaker-test.h"
+ #include "gvc-mixer-stream.h"
