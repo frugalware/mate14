@@ -5,7 +5,7 @@ options=('asneeded')
 
 pkgname=mate-media
 pkgver=1.5.1
-pkgrel=1
+pkgrel=2
 pkgdesc="MATE media-utils"
 archs=('i686' 'x86_64')
 groups=('mate-extra')
@@ -23,9 +23,8 @@ sha1sums=('2644949490a89156376ead21b3af06ecbf8ecc9a' \
 build()
 {
 	Fcd
+	Fpatchall
 	Fsed 'AM_CONFIG_HEADER' 'AC_CONFIG_HEADERS' configure.ac
-	# Fsed on this file because patch does not apply...	
-	Fsed 'canberra-gtk.h' 'canberra-gtk2.h' mate-volume-control/src/gvc-speaker-test.c
 	NOCONFIGURE=1 ./autogen.sh || Fdie
 	Fmake --enable-gstmix --enable-gst-mixer-applet --enable-pulseaudio \
 		--enable-gstreamer
